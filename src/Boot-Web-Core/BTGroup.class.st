@@ -6,3 +6,9 @@ Class {
 	#superclass : #BTIAMObject,
 	#category : #'Boot-Web-Core-IAM'
 }
+
+{ #category : #'accessing - defaults' }
+BTGroup class >> systemIconName [
+
+	^ #group
+]

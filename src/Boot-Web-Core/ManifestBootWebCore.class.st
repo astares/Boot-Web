@@ -18,7 +18,7 @@ ManifestBootWebCore class >> ruleBadMessageRule2V1FalsePositive [
 ManifestBootWebCore class >> ruleClassNotReferencedRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGClassDefinition #(#BTIcons)) #'2023-06-23T00:23:27.963721+02:00') )
+	^ #(#(#(#RGClassDefinition #(#BTIcons)) #'2023-06-23T00:23:27.963721+02:00') #(#(#RGClassDefinition #(#BTWebserver)) #'2023-06-23T01:11:50.75337+02:00') )
 ]
 
 { #category : #'code-critics' }
