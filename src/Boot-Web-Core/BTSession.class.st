@@ -8,7 +8,7 @@ Class {
 		'announcer',
 		'user'
 	],
-	#category : #'Boot-Web-UI-Session'
+	#category : #'Boot-Web-Core-Session'
 }
 
 { #category : #accessing }

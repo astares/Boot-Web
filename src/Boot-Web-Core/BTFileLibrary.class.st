@@ -4,7 +4,7 @@ Bootstrap file library
 Class {
 	#name : #BTFileLibrary,
 	#superclass : #WAFileMetadataLibrary,
-	#category : #'Boot-Web-UI-Library'
+	#category : #'Boot-Web-Core-Session'
 }
 
 { #category : #updating }

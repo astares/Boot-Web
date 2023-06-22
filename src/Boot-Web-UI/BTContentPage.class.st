@@ -1,3 +1,6 @@
+"
+A content page
+"
 Class {
 	#name : #BTContentPage,
 	#superclass : #BTComponent,
