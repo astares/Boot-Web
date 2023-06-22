@@ -26,7 +26,7 @@ BaselineOfBootWeb >> bootWeb: spec [
 
 	"Packages"
 	spec
-		package: 'Boot-Web-Core' with: [ spec requires: #('INIFile' 'Seaside') ];
+		package: 'Boot-Web-Core' with: [ spec requires: #('INIFile' 'Seaside3') ];
 		package: 'Boot-Web-Core-Tests' with: [ spec requires: #('Boot-Web-Core') ];
 		package: 'Boot-Web-UI' with: [ spec requires: #('Boot-Web-Core') ];
 		package: 'Boot-Web-UI-Tests' with: [ spec requires: #('Boot-Web-UI') ].
@@ -54,7 +54,7 @@ BaselineOfBootWeb >> iniFile: spec [
 BaselineOfBootWeb >> seaside: spec [
 
 	spec
-		baseline: 'Seaside'
+		baseline: 'Seaside3'
 		with: [
 		spec repository: 'github://SeasideSt/Seaside:master/repository' ]
 ]
