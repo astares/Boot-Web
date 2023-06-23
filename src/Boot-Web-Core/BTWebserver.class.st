@@ -37,11 +37,10 @@ BTWebserver class >> openWebbrowser [
 
 { #category : #'world menu' }
 BTWebserver class >> serverMenuCommandOn: aBuilder [
-
 	<worldMenu>
 
 	(aBuilder item: #Webserver)
-		order: 80;
+		order: 80; 
 		icon: (self iconNamed: #server).
 
 	(aBuilder item: #'Start webserver')

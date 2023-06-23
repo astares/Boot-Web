@@ -63,3 +63,11 @@ BTRootComponent class >> registerOnApp: app [
 	app
 		addLibrary: BTFileLibrary
 ]
+
+{ #category : #updating }
+BTRootComponent >> updateRoot: html [
+
+	html meta
+		name: 'viewport';
+		content: 'width=device-width, initial-scale=1.0"'
+]

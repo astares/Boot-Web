@@ -26,5 +26,5 @@ BTContentPage >> initialize [
 { #category : #rendering }
 BTContentPage >> renderContentOn: html [
 
-	html header: [ html render: navigationBar ]
+	html main: [ html render: navigationBar ]
 ]
