@@ -64,10 +64,18 @@ BTRootComponent class >> registerOnApp: app [
 		addLibrary: BTFileLibrary
 ]
 
+{ #category : #accessing }
+BTRootComponent >> title [
+
+	^'Astares Web'
+]
+
 { #category : #updating }
 BTRootComponent >> updateRoot: html [
 
 	html meta
 		name: 'viewport';
-		content: 'width=device-width, initial-scale=1.0"'
+		content: 'width=device-width, initial-scale=1.0"'.
+	html title: self title.	
+	html beHtml5 	
 ]
