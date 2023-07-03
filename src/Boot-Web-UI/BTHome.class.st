@@ -41,7 +41,8 @@ BTHome class >> register [
 BTHome class >> registerOnApp: app [
 
 	super registerOnApp: app.
-	app sessionClass: BTSession
+	app sessionClass: BTSession.
+	app preferenceAt: #trackingStrategy put: WACookieIfSupportedSessionTrackingStrategy new.
 ]
 
 { #category : #hooks }
