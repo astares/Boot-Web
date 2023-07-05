@@ -51,3 +51,9 @@ BTComponent class >> isAbstract [
 BTComponent class >> systemIconName [
 	^ #wa
 ]
+
+{ #category : #testing }
+BTComponent >> isDarkTheme [
+
+	^ false
+]

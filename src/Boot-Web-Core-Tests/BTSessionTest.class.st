@@ -13,7 +13,7 @@ Class {
 { #category : #utilities }
 BTSessionTest >> loginToSession [
 
-	session login: (BTUser named: 'admin')
+	session login: BTUserInfo new
 ]
 
 { #category : #utilities }

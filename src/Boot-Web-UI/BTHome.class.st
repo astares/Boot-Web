@@ -5,7 +5,7 @@ Class {
 	#name : #BTHome,
 	#superclass : #BTRootComponent,
 	#instVars : [
-		'content'
+		'workbench'
 	],
 	#category : #'Boot-Web-UI-Base'
 }
@@ -48,12 +48,12 @@ BTHome class >> registerOnApp: app [
 { #category : #hooks }
 BTHome >> children [
 
-	^ Array with: content
+	^ Array with: workbench
 ]
 
 { #category : #initialization }
 BTHome >> initialize [
 
 	super initialize.
-	content := BTContentPage new
+	workbench := BTWorkbench new
 ]

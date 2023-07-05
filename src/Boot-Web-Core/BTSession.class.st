@@ -6,7 +6,7 @@ Class {
 	#superclass : #WASession,
 	#instVars : [
 		'announcer',
-		'user'
+		'userInfo'
 	],
 	#category : #'Boot-Web-Core-Session'
 }
@@ -20,17 +20,17 @@ BTSession >> announcer [
 { #category : #testing }
 BTSession >> isLoggedIn [
 
-	^ user notNil
+	^ userInfo notNil
 ]
 
 { #category : #authentication }
 BTSession >> login: aUser [
 
-	user := aUser
+	userInfo := aUser
 ]
 
 { #category : #authentication }
 BTSession >> logout [
 
-	user := nil
+	userInfo := nil
 ]
