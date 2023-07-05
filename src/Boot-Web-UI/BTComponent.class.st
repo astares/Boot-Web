@@ -55,5 +55,5 @@ BTComponent class >> systemIconName [
 { #category : #testing }
 BTComponent >> isDarkTheme [
 
-	^ false
+	^ self session userInfo ifNil: [ false ] ifNotNil: [:userInfo | userInfo isDarkThemeSet ]
 ]

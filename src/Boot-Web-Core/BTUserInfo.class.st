@@ -26,6 +26,12 @@ BTUserInfo >> initialize [
 ]
 
 { #category : #testing }
+BTUserInfo >> isDarkThemeSet [
+
+	^ theme = #dark
+]
+
+{ #category : #testing }
 BTUserInfo >> isLightThemeSet [
 
 	^ theme = #light

@@ -34,3 +34,9 @@ BTSession >> logout [
 
 	userInfo := nil
 ]
+
+{ #category : #accessing }
+BTSession >> userInfo [
+
+	^ userInfo
+]
