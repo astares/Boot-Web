@@ -15,7 +15,8 @@ BaselineOfBootWeb >> baseline: spec [
 		"Dependencies"
 		self
 			iniFile: spec;
-			seaside: spec.
+			seaside: spec;
+			glorp: spec.
 
 		"Own packages and groups"
 		self bootWeb: spec ]
@@ -26,7 +27,7 @@ BaselineOfBootWeb >> bootWeb: spec [
 
 	"Packages"
 	spec
-		package: 'Boot-Web-Core' with: [ spec requires: #('INIFile' 'Seaside3') ];
+		package: 'Boot-Web-Core' with: [ spec requires: #('INIFile' 'Seaside3' 'Glorp') ];
 		package: 'Boot-Web-Core-Tests' with: [ spec requires: #('Boot-Web-Core') ];
 		package: 'Boot-Web-UI' with: [ spec requires: #('Boot-Web-Core') ];
 		package: 'Boot-Web-UI-Tests' with: [ spec requires: #('Boot-Web-UI') ].
@@ -39,6 +40,15 @@ BaselineOfBootWeb >> bootWeb: spec [
 		group: 'CI' with: #('Tests');
 		group: 'all' with: #('Core' 'Tests');
 		group: 'default' with: #('all')
+]
+
+{ #category : #dependencies }
+BaselineOfBootWeb >> glorp: spec [
+
+	spec
+		baseline: 'Glorp'
+		with: [
+		spec repository: 'github://pharo-rdbms/glorp:master/src' ]
 ]
 
 { #category : #dependencies }
