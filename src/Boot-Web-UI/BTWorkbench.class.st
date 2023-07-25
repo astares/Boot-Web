@@ -14,7 +14,7 @@ Class {
 { #category : #hooks }
 BTWorkbench >> children [
 
-	^ Array with: navigationBar
+	^ Array with: navigationBar with: sidebar
 ]
 
 { #category : #initialization }
@@ -29,22 +29,11 @@ BTWorkbench >> initialize [
 BTWorkbench >> renderContentOn: html [
 
 	html div 
-		class: 'workbench container-fluid px-0';
+		class: 'page-wrapper';
 		with:  [ 
 			html 
 				render: sidebar;
 				render: navigationBar ].
 			
 	BTFileLibrary addLoadScriptTo: html	
-]
-
-{ #category : #rendering }
-BTWorkbench >> style [ 
-
-	^'
-	.workbench { 
-		background-color: #ffffce;
-		height: 100vh;
-	 }
-	'
 ]

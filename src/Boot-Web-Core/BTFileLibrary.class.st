@@ -23,27 +23,27 @@ BTFileLibrary class >> addLoadScriptTo: html [
 { #category : #'accessing - defaults' }
 BTFileLibrary class >> cdnCSSLocation [
 
-	^ 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'
+	^ 'https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/css/tabler.min.css'
 ]
 
 { #category : #'accessing - defaults' }
 BTFileLibrary class >> cdnCSSLocationIntegrity [
 	"Calculated via https://www.srihash.org"
 
-	^ 'sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65'
+	^ 'sha384-wIPtnwKyfjylOkP4ccy+aMlHOLIfVWHDdlJ35pBwbLDH4HHXq5yG4NknAhu6Rraf'
 ]
 
 { #category : #'accessing - defaults' }
 BTFileLibrary class >> cdnJSLocation [
 
-	^ 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'
+	^ 'https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/js/tabler.min.js'
 ]
 
 { #category : #'accessing - defaults' }
 BTFileLibrary class >> cdnJSLocationIntegrity [
 	"Calculated via https://www.srihash.org"
 
-	^ 'sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4'
+	^ 'sha384-DnBu3uHMkeDdH3JZaljVS533JqQjgcRVO+uZ3YiBXQYcYITM6HER+4+RPGobVEEZ'
 ]
 
 { #category : #'uploaded metadata' }

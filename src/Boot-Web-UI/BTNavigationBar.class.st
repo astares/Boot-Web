@@ -10,10 +10,8 @@ Class {
 { #category : #rendering }
 BTNavigationBar >> renderContentOn: html [
 
-	html nav
-		class: 'navbar';
-		class: 'navbar-light bg-light' if: self isDarkTheme not;
-		class: 'navbar-dark bg-dark' if: self isDarkTheme;
+	html header
+		class: 'navbar navbar-expand-md d-print-none';
 		with: [ self renderNavBarContentOn: html ]
 ]
 
@@ -21,7 +19,7 @@ BTNavigationBar >> renderContentOn: html [
 BTNavigationBar >> renderNavBarContentOn: html [
 
 	html div
-		class: 'container-fluid';
+		class: 'container-xl';
 		with: [ self renderTogglerOn: html ]
 ]
 
@@ -35,4 +33,13 @@ BTNavigationBar >> renderTogglerOn: html [
 		attributeAt: 'aria-controls' put: 'offcanvasNavbarDark';
 		attributeAt: 'aria-label' put: 'Toggle navigation';
 		with: [ html span class: 'navbar-toggler-icon' ]
+]
+
+{ #category : #hooks }
+BTNavigationBar >> style [
+	"Override the container-xxl styles to use full width"
+
+	^ '.container-xl {
+  max-width: 100%;
+}'
 ]
