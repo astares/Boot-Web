@@ -20,13 +20,11 @@ BTSideBar >> initialize [
 { #category : #rendering }
 BTSideBar >> renderContentOn: html [
 	html aside
-		class: 'offcanvas offcanvas-start';	 	 
+		class: 'navbar offcanvas offcanvas-start';	 	 
 		tabIndex: -1;
 		id: 'offcanvasNavbarDark';		  
   		with: [  	
-			 self 
-				renderSideBarHeaderOn: html;
-				renderSideBarContentOn: html	 		 
+			 self renderSideBarOn: html	 		 
 	]
 ]
 
@@ -45,7 +43,8 @@ BTSideBar >> renderSideBarHeaderOn: html [
 { #category : #rendering }
 BTSideBar >> renderSideBarMenuOn: html [
 
-	html html: '<div class="navbar navbar-vertical navbar-expand-lg">
+	html html: ' 
+		<div>
         <div class="container-fluid">
   
           <div class="  navbar-collapse" id="sidebar-menu">
@@ -159,9 +158,20 @@ BTSideBar >> renderSideBarMenuOn: html [
             </ul>
           </div>
         </div>
-      </div>
+     <div>
     
          '
+]
+
+{ #category : #rendering }
+BTSideBar >> renderSideBarOn: html [
+
+	html div
+		class: 'navbar-vertical navbar-expand-lg';
+		with: [
+			self
+				renderSideBarHeaderOn: html;
+				renderSideBarContentOn: html ]
 ]
 
 { #category : #hooks }
@@ -171,5 +181,9 @@ BTSideBar >> style [
 	^ '	 
   .navbar-expand-md .navbar-toggler {
     display: block !important; /* Override the display: none property */
-  }'
+  }
+
+  .navbar-vertical.navbar-expand-lg {
+    width: var(--tblr-offcanvas-width) !important; /* Override the width property to align with offcanvas */
+'
 ]
